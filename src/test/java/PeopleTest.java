@@ -15,34 +15,34 @@ class PeopleTest {
     }
     @Test
     public void testAdd(){
-        //Given
+        //given
         int expected = 1;
-        //When
+        //when
         people.add(new Person(6969L,"Andrew"));
-        //Then
+        //then
         Assertions.assertEquals(expected, people.ArraylistSize());
     }
     @Test
     public void testRemove(){
-        //Given
+        //given
         int expected = 0;
         Person person1 = new Person(1337L,"Saad");
-        //When
+        //when
         people.add(person1);
         people.remove(person1);
-        //Then
+        //then
         Assertions.assertEquals(expected, people.ArraylistSize());
     }
     @Test
     public void testFindById(){
-        //Given
+        //given
         List<Person> personList = new ArrayList<>();
         personList.add(new Person(80085L,"Durran"));
         people.setPersonList(personList);
         Person expected = personList.get(0);
-        //When
+        //when
         Person actual = people.findById(80085L);
-        //Then
+        //then
         Assertions.assertEquals(expected, actual);
     }
 }
